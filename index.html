@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Indonesian Legend Quest - Teks Legenda Kelas 9</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b0f19;
+            color: #f8fafc;
+            user-select: none;
+            touch-action: manipulation;
+        }
+        .font-pixel {
+            font-family: 'Press Start 2P', monospace;
+        }
+        .bg-pattern {
+            background-color: #0b0f19;
+            background-image: radial-gradient(#d97706 0.6px, transparent 0.6px), radial-gradient(#d97706 0.6px, #0b0f19 0.6px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+        .gold-border {
+            border: 2px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-retro {
+            background: linear-gradient(180deg, #f59e0b 0%, #b45309 100%);
+            border-bottom: 4px solid #78350f;
+            transition: all 0.1s ease;
+        }
+        .btn-retro:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16/9;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- Header Navigation Bar -->
+    <header class="w-full bg-slate-900/90 border-b border-amber-500/30 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/50 flex items-center justify-center font-pixel text-amber-400 text-lg shadow-lg">
+                    🗿
+                </div>
+                <div>
+                    <h1 class="font-pixel text-xs md:text-sm gold-gradient-text tracking-wider">LEGEND QUEST</h1>
+                    <p class="text-[10px] md:text-xs text-amber-400/80 font-semibold">Teks Legenda Kelas 9 SMP</p>
+                </div>
+            </div>
+
+            <!-- Stepper Indicator -->
+            <div class="hidden sm:flex items-center gap-2 text-xs font-semibold">
+                <span id="step-1-badge" class="px-2.5 py-1 rounded-full bg-amber-500 text-slate-950 font-bold">1. Identitas</span>
+                <span class="text-slate-600">→</span>
+                <span id="step-2-badge" class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400">2. Cerita</span>
+                <span class="text-slate-600">→</span>
+                <span id="step-3-badge" class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400">3. Main</span>
+                <span class="text-slate-600">→</span>
+                <span id="step-4-badge" class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-400">4. Hasil</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-grow flex flex-col justify-center">
+
+        <!-- RUANG 1: BERANDA IDENTITAS SISWA -->
+        <section id="room-1" class="space-y-6">
+            <div class="bg-slate-900/90 border border-amber-500/40 rounded-2xl p-6 md:p-8 gold-border shadow-2xl space-y-6 text-center">
+                <div class="space-y-2">
+                    <span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-xs font-bold uppercase tracking-widest">
+                        🎮 Media Pembelajaran Bahasa Indonesia
+                    </span>
+                    <h2 class="font-pixel text-xl md:text-2xl gold-gradient-text leading-relaxed">INDONESIAN LEGEND QUEST</h2>
+                    <p class="text-slate-300 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
+                        Petualangan retro berlari, melompat, dan menjawab teka-teki Teks Legenda Nusantara! Isi identitasmu sebelum memulai petualangan.
+                    </p>
+                </div>
+
+                <!-- Vector Illustrations Showcase -->
+                <div class="grid grid-cols-3 gap-3 my-4">
+                    <div class="bg-slate-950/70 border border-amber-500/20 rounded-xl p-3 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-amber-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m9-9H3m15-4l3 4-3 4M6 8L3 12l3 4" />
+                        </svg>
+                        <span class="text-[10px] text-amber-300 font-bold">Salatiga</span>
+                    </div>
+                    <div class="bg-slate-950/70 border border-amber-500/20 rounded-xl p-3 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-blue-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                        <span class="text-[10px] text-blue-300 font-bold">Rawa Pening</span>
+                    </div>
+                    <div class="bg-slate-950/70 border border-amber-500/20 rounded-xl p-3 flex flex-col items-center">
+                        <svg class="w-12 h-12 text-purple-400 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m0 0v-4a2 2 0 012-2h2a2 2 0 012 2v4" />
+                        </svg>
+                        <span class="text-[10px] text-purple-300 font-bold">Prambanan</span>
+                    </div>
+                </div>
+
+                <!-- Input Form -->
+                <div class="max-w-md mx-auto space-y-4 text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-amber-300 mb-1">Nama Lengkap Siswa:</label>
+                        <input type="text" id="input-student-name" placeholder="Masukkan nama kamu..." class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-amber-500/40 text-amber-100 placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-amber-300 mb-1">Kelas:</label>
+                        <input type="text" id="input-student-class" placeholder="Contoh: 9A / 9B" class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-amber-500/40 text-amber-100 placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400">
+                    </div>
+                    <button onclick="goToRoom2()" class="w-full py-3.5 rounded-xl btn-retro font-bold text-slate-950 text-sm tracking-wide uppercase shadow-lg transition">
+                        Lanjut Pilih Cerita ▶
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RUANG 2: PILIHAN TEMA CERITA -->
+        <section id="room-2" class="hidden space-y-6">
+            <div class="text-center space-y-2">
+                <span class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-xs font-bold uppercase tracking-widest">
+                    Langkah 2 dari 4: Pilih Legenda & Stage
+                </span>
+                <h2 class="font-pixel text-xl md:text-2xl gold-gradient-text">PILIH LEGENDA NUSANTARA</h2>
+                <p class="text-slate-400 text-xs md:text-sm max-w-lg mx-auto">
+                    Setiap tema legenda terbagi menjadi 3 Stage (Orientasi, Komplikasi, Resolusi). Pilih cerita untuk melihat peta stage!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Story Card 1 -->
+                <div class="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 hover:border-amber-400 transition shadow-xl flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="h-32 rounded-xl bg-amber-950/50 border border-amber-500/30 flex flex-col items-center justify-center relative overflow-hidden p-2 text-center">
+                            <span class="text-4xl group-hover:scale-110 transition duration-300 mb-1">🧙‍♂️📜</span>
+                            <span class="text-xs font-bold text-amber-300">Ki Ageng Pandanaran</span>
+                        </div>
+                        <h3 class="font-bold text-amber-300 text-base">[1] Asal-Usul Kota Salatiga</h3>
+                        <div class="flex items-center justify-between text-[10px] text-amber-400 font-semibold bg-slate-950 p-2 rounded-lg border border-amber-500/20">
+                            <span>🎮 Total 3 Stage</span>
+                            <span>⭐ 6 Kuis Telur</span>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Kisah pengorbanan Ki Ageng Pandanaran dan penyesalan akibat tiga kesalahan ("Sela Tiga").
+                        </p>
+                    </div>
+                    <button onclick="openStageRoadmap(1)" class="mt-5 w-full py-2.5 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase transition">
+                        Pilih & Lihat 3 Stage ▶
+                    </button>
+                </div>
+
+                <!-- Story Card 2 -->
+                <div class="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 hover:border-amber-400 transition shadow-xl flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="h-32 rounded-xl bg-blue-950/50 border border-blue-500/30 flex flex-col items-center justify-center relative overflow-hidden p-2 text-center">
+                            <span class="text-4xl group-hover:scale-110 transition duration-300 mb-1">👦🐉</span>
+                            <span class="text-xs font-bold text-blue-300">Baru Klinting</span>
+                        </div>
+                        <h3 class="font-bold text-amber-300 text-base">[2] Legenda Rawa Pening</h3>
+                        <div class="flex items-center justify-between text-[10px] text-blue-300 font-semibold bg-slate-950 p-2 rounded-lg border border-blue-500/20">
+                            <span>🎮 Total 3 Stage</span>
+                            <span>⭐ 6 Kuis Telur</span>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Kisah anak ajaib Baru Klinting yang menancapkan lidi ajaib untuk menguji keangkuhan warga Desa Pathok.
+                        </p>
+                    </div>
+                    <button onclick="openStageRoadmap(2)" class="mt-5 w-full py-2.5 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase transition">
+                        Pilih & Lihat 3 Stage ▶
+                    </button>
+                </div>
+
+                <!-- Story Card 3 -->
+                <div class="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-5 hover:border-amber-400 transition shadow-xl flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="h-32 rounded-xl bg-purple-950/50 border border-purple-500/30 flex flex-col items-center justify-center relative overflow-hidden p-2 text-center">
+                            <span class="text-4xl group-hover:scale-110 transition duration-300 mb-1">🤴👑</span>
+                            <span class="text-xs font-bold text-purple-300">Bandung Bondowoso</span>
+                        </div>
+                        <h3 class="font-bold text-amber-300 text-base">[3] Legenda Candi Prambanan</h3>
+                        <div class="flex items-center justify-between text-[10px] text-purple-300 font-semibold bg-slate-950 p-2 rounded-lg border border-purple-500/20">
+                            <span>🎮 Total 3 Stage</span>
+                            <span>⭐ 6 Kuis Telur</span>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Kisah Bandung Bondowoso yang mengerahkan pasukan jin membangun 1.000 candi atas permintaan Roro Jonggrang.
+                        </p>
+                    </div>
+                    <button onclick="openStageRoadmap(3)" class="mt-5 w-full py-2.5 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase transition">
+                        Pilih & Lihat 3 Stage ▶
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center pt-2">
+                <button onclick="goToRoom1()" class="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 text-xs hover:bg-slate-700">
+                    ← Kembali ke Identitas
+                </button>
+            </div>
+        </section>
+
+        <!-- MODAL ROADMAP 3 STAGE CERITA -->
+        <div id="stage-roadmap-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur z-50 hidden flex items-center justify-center p-4">
+            <div class="bg-slate-900 border border-amber-500/50 rounded-2xl max-w-xl w-full p-6 gold-border space-y-5 shadow-2xl">
+                <div class="flex justify-between items-center border-b border-amber-500/20 pb-3">
+                    <div>
+                        <span id="roadmap-story-badge" class="text-[10px] px-2.5 py-0.5 bg-amber-500/20 text-amber-300 font-bold rounded-full">
+                            Legenda #1
+                        </span>
+                        <h3 id="roadmap-story-title" class="font-pixel text-sm text-amber-300 mt-1">Judul Legenda</h3>
+                    </div>
+                    <button onclick="closeStageRoadmap()" class="text-slate-400 hover:text-white font-bold text-lg">✕</button>
+                </div>
+
+                <p class="text-xs text-slate-300">
+                    Petualangan ini terbagi menjadi <b class="text-amber-400">3 Stage Struktur Teks Legenda</b>. Kamu akan memulai dari Stage 1 dan membuka stage berikutnya secara berurutan:
+                </p>
+
+                <!-- 3 Stage Cards -->
+                <div class="space-y-3">
+                    <div class="bg-slate-950 border border-amber-500/40 rounded-xl p-3.5 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/50 flex items-center justify-center font-bold text-amber-400 text-sm">
+                                ST1
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-200 text-xs">Stage 1: Orientasi</h4>
+                                <p id="roadmap-stage1-desc" class="text-[10px] text-slate-400">Pengenalan Tokoh & Latar Cerita (2 Telur Kuis)</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold rounded-full">
+                            ▶ SIAP MAIN
+                        </span>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between gap-3 opacity-80">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-slate-400 text-sm">
+                                ST2
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-300 text-xs">Stage 2: Komplikasi</h4>
+                                <p id="roadmap-stage2-desc" class="text-[10px] text-slate-400">Puncak Konflik & Tantangan Rintangan (2 Telur Kuis)</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-500 text-[10px] font-bold rounded-full">
+                            🔒 TERKUNCI
+                        </span>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between gap-3 opacity-80">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-slate-400 text-sm">
+                                ST3
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-300 text-xs">Stage 3: Resolusi & Koda</h4>
+                                <p id="roadmap-stage3-desc" class="text-[10px] text-slate-400">Penyelesaian Cerita & Pesan Moral (2 Telur Kuis)</p>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-500 text-[10px] font-bold rounded-full">
+                            🔒 TERKUNCI
+                        </span>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button onclick="confirmStartGameFromRoadmap()" class="w-full py-3 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase tracking-wide">
+                        🚀 Mulai Petualangan Stage 1 ▶
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RUANG 3: PETUALANGAN ACTION PLATFORMER & KUIS -->
+        <section id="room-3" class="hidden space-y-4">
+            <!-- HUD & Player Status -->
+            <div class="flex flex-wrap justify-between items-center bg-slate-900/90 border border-amber-500/30 p-3 rounded-xl gap-2">
+                <div class="flex items-center gap-3">
+                    <div id="hud-hero-icon" class="text-2xl p-1 bg-slate-800 rounded-lg">🧙‍♂️</div>
+                    <div>
+                        <h2 id="hud-story-title" class="font-bold text-amber-300 text-xs md:text-sm">Judul Legenda</h2>
+                        <div class="flex items-center gap-2 mt-0.5">
+                            <span id="hud-stage-name" class="text-[10px] md:text-xs text-amber-400 font-semibold">Stage 1: Orientasi</span>
+                            <span id="hud-stage-badge" class="px-2 py-0.2 bg-amber-500/20 text-amber-300 text-[9px] font-bold rounded border border-amber-500/40">1/3 STAGE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 text-xs">
+                    <!-- HP / Energy Bar -->
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-red-400 font-bold">❤️</span>
+                        <div class="w-24 md:w-32 bg-slate-950 h-3 rounded-full border border-slate-700 overflow-hidden">
+                            <div id="hp-bar-inner" class="bg-red-500 h-full w-full transition-all duration-300"></div>
+                        </div>
+                        <span id="hp-text" class="font-bold text-amber-200 text-[10px]">100%</span>
+                    </div>
+
+                    <!-- Score -->
+                    <div class="bg-slate-950 px-3 py-1 rounded-lg border border-amber-500/30 font-pixel text-amber-300 text-[10px]">
+                        SKOR: <span id="score-text">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Viewport -->
+            <div id="canvas-container" onclick="triggerJump()" class="canvas-container bg-slate-950 border border-amber-500/40 rounded-xl overflow-hidden shadow-2xl gold-border cursor-pointer">
+                <canvas id="gameCanvas" width="800" height="450"></canvas>
+            </div>
+
+            <!-- Jump Controls Helper -->
+            <div class="bg-slate-900/80 border border-amber-500/20 p-3 rounded-xl flex justify-between items-center text-xs text-slate-300">
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-1 bg-slate-800 border border-amber-500/40 rounded text-amber-300 font-bold">SPASI</span>
+                    <span class="px-2 py-1 bg-slate-800 border border-amber-500/40 rounded text-amber-300 font-bold">PANAH ATAS</span>
+                    <span class="text-slate-400">atau <b>TAP LAYAR CANVAS</b> untuk melompat!</span>
+                </div>
+                <button onclick="triggerJump()" class="px-4 py-1.5 btn-retro font-bold text-slate-950 text-xs rounded-lg">
+                    🪂 LOMPAT!
+                </button>
+            </div>
+        </section>
+
+        <!-- RUANG 4: LAPORAN & SERTIFIKAT HASIL BELAJAR -->
+        <section id="room-4" class="hidden space-y-6">
+            <div class="bg-slate-900/90 border border-amber-500/40 rounded-2xl p-6 md:p-8 gold-border shadow-2xl space-y-6 text-center">
+                <div class="text-5xl mb-2">🏆</div>
+                <h2 class="font-pixel text-lg md:text-xl gold-gradient-text">LAPORAN HASIL PETUALANGAN</h2>
+                <p class="text-slate-400 text-xs">Selamat! Kamu telah menyelesaikan petualangan Teks Legenda Nusantara.</p>
+
+                <div class="bg-slate-950 border border-amber-500/30 rounded-xl p-5 text-left max-w-md mx-auto space-y-2 text-xs">
+                    <div class="flex justify-between border-b border-slate-800 pb-1.5">
+                        <span class="text-slate-400">Nama Siswa:</span>
+                        <span id="cert-student-name" class="font-bold text-amber-300">-</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-1.5">
+                        <span class="text-slate-400">Kelas:</span>
+                        <span id="cert-student-class" class="font-bold text-amber-300">-</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-1.5">
+                        <span class="text-slate-400">Judul Legenda:</span>
+                        <span id="cert-story-title" class="font-bold text-amber-300">-</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-1.5">
+                        <span class="text-slate-400">Sisa Energi (HP):</span>
+                        <span id="cert-hp" class="font-bold text-emerald-400">-</span>
+                    </div>
+                    <div class="flex justify-between pt-1">
+                        <span class="text-slate-400 font-bold">TOTAL SKOR:</span>
+                        <span id="cert-score" class="font-pixel text-amber-400 text-sm">0</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-4">
+                    <button onclick="resetGameToRoom2()" class="px-6 py-3 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase">
+                        🔄 Coba Cerita Lain
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Quiz Overlay -->
+    <div id="quiz-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/50 rounded-2xl max-w-lg w-full p-6 gold-border space-y-4 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-amber-500/20 pb-2">
+                <span class="font-pixel text-xs text-amber-400 flex items-center gap-2">🥚 TELUR RAKSASA KUIS</span>
+                <span id="quiz-stage-tag" class="text-[10px] px-2 py-0.5 bg-amber-500/20 text-amber-300 rounded">Stage 1</span>
+            </div>
+
+            <p id="quiz-narrative" class="text-xs text-slate-300 italic bg-slate-950 p-3 rounded-xl border border-slate-800 leading-relaxed">
+                Narasi cerita akan muncul di sini...
+            </p>
+
+            <h3 id="quiz-question" class="font-bold text-amber-200 text-xs md:text-sm leading-snug">
+                Soal pertanyaan kuis?
+            </h3>
+
+            <div id="quiz-options" class="space-y-2">
+                <!-- Dynamic choices populated in JS -->
+            </div>
+
+            <div id="quiz-feedback" class="hidden p-2.5 rounded-xl text-center text-xs font-bold">
+                <!-- Feedback text populated in JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL STAGE COMPLETE TRANSITION -->
+    <div id="stage-clear-modal" class="fixed inset-0 bg-slate-950/90 backdrop-blur z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/50 rounded-2xl max-w-md w-full p-6 gold-border text-center space-y-4 shadow-2xl">
+            <div class="text-5xl animate-bounce">⭐🎉⭐</div>
+            <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 font-bold text-xs rounded-full border border-amber-500/40">
+                PENCAPAIAN STAGE
+            </span>
+            <h3 id="stage-clear-title" class="font-pixel text-base gold-gradient-text">STAGE 1 SELESAI!</h3>
+            <p id="stage-clear-sub" class="text-xs text-slate-300 leading-relaxed">
+                Kamu berhasil menyelesaikan bagian Orientasi!
+            </p>
+
+            <div class="bg-slate-950 border border-amber-500/20 p-4 rounded-xl text-left space-y-1.5 text-xs">
+                <div class="flex justify-between border-b border-slate-800 pb-1">
+                    <span class="text-slate-400">Skor Saat Ini:</span>
+                    <span id="stage-clear-score" class="font-bold text-amber-300">0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Tahap Berikutnya:</span>
+                    <span id="stage-clear-next-name" class="font-bold text-emerald-400">Stage 2: Komplikasi</span>
+                </div>
+            </div>
+
+            <button onclick="proceedToNextStage()" class="w-full py-3.5 rounded-xl btn-retro font-bold text-slate-950 text-xs uppercase tracking-wide shadow-lg">
+                Lanjut ke Stage Berikutnya ▶
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Game Logic -->
+    <script>
+        // Global Player & Game State
+        let studentName = "";
+        let studentClass = "";
+        let selectedStoryId = 1;
+        let currentStage = 1; // 1: Orientasi, 2: Komplikasi, 3: Resolusi
+        let currentEggIndex = 1; // 1 or 2 per stage
+        let hp = 100;
+        let score = 0;
+        let gameRunning = false;
+        let animFrameId = null;
+        let canvas, ctx;
+        let lastTime = 0;
+
+        // Player physics
+        const player = {
+            x: 100,
+            y: 280,
+            groundY: 280,
+            vy: 0,
+            isGrounded: true,
+            gravity: 0.8,
+            jumpStrength: -14,
+            coyoteTimer: 0
+        };
+
+        let items = [];
+        let giantEgg = null;
+
+        // Stage Sky/Atmosphere Color Mapping per Stage
+        const stageEnvironments = {
+            1: { skyColor: '#0f172a', groundColor: '#1e293b', pathAccent: '#d97706', nameTag: "1/3 Stage (Orientasi)" },
+            2: { skyColor: '#31121d', groundColor: '#1a0910', pathAccent: '#ef4444', nameTag: "2/3 Stage (Komplikasi)" },
+            3: { skyColor: '#0d0b26', groundColor: '#131138', pathAccent: '#8b5cf6', nameTag: "3/3 Stage (Resolusi)" }
+        };
+
+        // Comprehensive Dataset for the 3 Legends (Kelas 9 SMP Standards)
+        const storyData = {
+            1: {
+                title: "Asal-Usul Kota Salatiga",
+                heroName: "Ki Ageng Pandanaran",
+                heroIcon: "🧙‍♂️",
+                stages: {
+                    1: {
+                        name: "Stage 1: Orientasi",
+                        roadmapDesc: "Pengenalan Tokoh Ki Ageng Pandanaran & Latar Kota Semarang",
+                        narrative: "Ki Ageng Pandanaran adalah Bupati Semarang yang kaya raya namun sombong dan lalai. Suatu hari, Sunan Kalijaga menyamar sebagai penjual rumput untuk menyadarkannya bahwa harta dunia tidak abadi.",
+                        eggs: [
+                            {
+                                question: "Struktur Teks Legenda pada paragraf pengenalan tokoh Ki Ageng Pandanaran dan latar Kota Semarang di atas disebut...",
+                                options: ["A. Komplikasi", "B. Orientasi", "C. Resolusi", "D. Koda"],
+                                correct: 1
+                            },
+                            {
+                                question: "Kata sandang yang tepat untuk menyapa tokoh Ki Ageng Pandanaran dalam teks cerita adalah...",
+                                options: ["A. Sang", "B. Si", "C. Para", "D. Hyang"],
+                                correct: 0
+                            }
+                        ]
+                    },
+                    2: {
+                        name: "Stage 2: Komplikasi",
+                        roadmapDesc: "Puncak Konflik: Tongkat Emas & Penghadangan 3 Perampok",
+                        narrative: "Ki Ageng Pandanaran memutuskan bertobat dan melakukan perjalanan spiritual bersama istrinya, Nyi Ageng. Namun, Nyi Ageng membawa tongkat bambu berisi emas, yang mengundang perhatian tiga perampok.",
+                        eggs: [
+                            {
+                                question: "Konflik utama (Komplikasi) dalam kutipan cerita di atas terjadi ketika...",
+                                options: [
+                                    "A. Ki Ageng memutuskan menjadi bupati lagi",
+                                    "B. Nyi Ageng membawa tongkat emas yang memicu penghadangan tiga perampok",
+                                    "C. Sunan Kalijaga memberikan hadiah emas",
+                                    "D. Warga Semarang mengadakan pesta pertunjukan"
+                                ],
+                                correct: 1
+                            },
+                            {
+                                question: "Watak tokoh Nyi Ageng yang masih membawa perhiasan rahasia mencerminkan sifat...",
+                                options: ["A. Dermawan", "B. Masih terikat harta duniawi", "C. Pemarah", "D. Penakut"],
+                                correct: 1
+                            }
+                        ]
+                    },
+                    3: {
+                        name: "Stage 3: Resolusi & Koda",
+                        roadmapDesc: "Penyelesaian Cerita & Penamaan Salatiga (Sela Tiga)",
+                        narrative: "Ki Ageng meminta perampok mengambil emas itu dan menyadarkan mereka. Karena terjadi tiga kesalahan (Nyi Ageng, Ki Ageng, dan Perampok), tempat tersebut dinamai 'Salatiga' (Sela Tiga).",
+                        eggs: [
+                            {
+                                question: "Tahap penyelesaian masalah saat perampok bertobat dan lokasi dinamai dinamakan...",
+                                options: ["A. Orientasi", "B. Klimaks", "C. Resolusi", "D. Komplikasi"],
+                                correct: 2
+                            },
+                            {
+                                question: "Pesan moral (Koda) utama dari Legenda Asal-Usul Kota Salatiga adalah...",
+                                options: [
+                                    "A. Harta harus disembunyikan di dalam bambu",
+                                    "B. Kesombongan dan ketamakan harta akan membawa penyesalan",
+                                    "C. Jangan pernah bepergian di malam hari",
+                                    "D. Perampok harus selalu diberi hadiah"
+                                ],
+                                correct: 1
+                            }
+                        ]
+                    }
+                }
+            },
+            2: {
+                title: "Legenda Rawa Pening",
+                heroName: "Baru Klinting",
+                heroIcon: "👦",
+                stages: {
+                    1: {
+                        name: "Stage 1: Orientasi",
+                        roadmapDesc: "Pengenalan Baru Klinting & Kedatangannya di Desa Pathok",
+                        narrative: "Baru Klinting adalah anak ajaib berwujud naga yang bertapa agar bisa menjadi manusia. Ia mendatangi Desa Pathok dengan tubuh kumal dan kelaparan saat warga mengadakan pesta gundul.",
+                        eggs: [
+                            {
+                                question: "Pengenalan tokoh Baru Klinting yang berwujud naga dan mendatangi Desa Pathok merupakan bagian...",
+                                options: ["A. Komplikasi", "B. Orientasi", "C. Koda", "D. Resolusi"],
+                                correct: 1
+                            },
+                            {
+                                question: "Kata keterangan waktu yang sering digunakan dalam Teks Legenda adalah...",
+                                options: ["A. Pada zaman dahulu", "B. Besok pagi", "C. Sekarang juga", "D. Masing-masing"],
+                                correct: 0
+                            }
+                        ]
+                    },
+                    2: {
+                        name: "Stage 2: Komplikasi",
+                        roadmapDesc: "Konflik Pengusiran & Tantangan Lidi Ajaib di Sawah",
+                        narrative: "Penduduk desa yang angkuh mengusir dan menghina Baru Klinting. Hanya Nyi Latung yang baik hati memberinya makan. Baru Klinting lalu menancapkan sebatang lidi dan menantang warga mencabutnya.",
+                        eggs: [
+                            {
+                                question: "Penyebab timbulnya konflik (Komplikasi) pada cerita di atas adalah...",
+                                options: [
+                                    "A. Nyi Latung memberi Baru Klinting makanan",
+                                    "B. Penduduk desa yang angkuh mengusir Baru Klinting",
+                                    "C. Hujan deras turun di desa",
+                                    "D. Baru Klinting tidur di sawah"
+                                ],
+                                correct: 1
+                            },
+                            {
+                                question: "Sifat warga Desa Pathok dalam teks legenda di atas adalah...",
+                                options: ["A. Sombong dan tidak peduli sesama", "B. Ramah dan suka menolong", "C. Bijaksana", "D. Khas dan bersahaja"],
+                                correct: 0
+                            }
+                        ]
+                    },
+                    3: {
+                        name: "Stage 3: Resolusi & Koda",
+                        roadmapDesc: "Air Menyembur Terbentuk Rawa Pening & Pesan Koda",
+                        narrative: "Tak seorang pun warga sanggup mencabut lidi itu. Saat Baru Klinting mencabutnya, air menyembur deras menenggelamkan desa menjadi Rawa Pening. Nyi Latung selamat dengan naik lesung.",
+                        eggs: [
+                            {
+                                question: "Bagian cerita saat air menyembur tenggelamkan desa hingga terbentuk Rawa Pening disebut...",
+                                options: ["A. Orientasi", "B. Resolusi", "C. Tinjauan", "D. Sintesis"],
+                                correct: 1
+                            },
+                            {
+                                question: "Nilai moral (Koda) yang dapat dipetik dari Legenda Rawa Pening adalah...",
+                                options: [
+                                    "A. Menghormati orang lain tanpa memandang fisiknya",
+                                    "B. Jangan bermain-main dengan lidi kayu",
+                                    "C. Suka mengadakan pesta setiap hari",
+                                    "D. Belajar mendayung lesung di air"
+                                ],
+                                correct: 0
+                            }
+                        ]
+                    }
+                }
+            },
+            3: {
+                title: "Legenda Candi Prambanan",
+                heroName: "Bandung Bondowoso",
+                heroIcon: "🤴",
+                stages: {
+                    1: {
+                        name: "Stage 1: Orientasi",
+                        roadmapDesc: "Pengenalan Bandung Bondowoso & Roro Jonggrang",
+                        narrative: "Bandung Bondowoso yang sakti berhasil mengalahkan Kerajaan Prambanan. Ia lalu jatuh cinta pada Roro Jonggrang dan ingin menjadikannya permaisuri.",
+                        eggs: [
+                            {
+                                question: "Bagian pengenalan tokoh Bandung Bondowoso dan keinginannya menikahi Roro Jonggrang disebut...",
+                                options: ["A. Orientasi", "B. Komplikasi", "C. Koda", "D. Penutup"],
+                                correct: 0
+                            },
+                            {
+                                question: "Ciri khas Teks Legenda dibanding teks narasi ilmiah adalah...",
+                                options: ["A. Memiliki unsur keajaiban/kesaktian", "B. Berisi grafik data kuantitatif", "C. Menggunakan rumus fisika", "D. Berisi berita faktual"],
+                                correct: 0
+                            }
+                        ]
+                    },
+                    2: {
+                        name: "Stage 2: Komplikasi",
+                        roadmapDesc: "Syarat 1.000 Candi & Tipu Muslihat Bantuan Jin",
+                        narrative: "Roro Jonggrang memberi syarat membangun 1.000 candi dalam semalam. Bandung panggil pasukan jin. Roro Jonggrang menipu dengan menumbuk lesung dan membakar jerami agar ayam berkokok lebih awal.",
+                        eggs: [
+                            {
+                                question: "Konflik utama puncak (Komplikasi) terjadi saat...",
+                                options: [
+                                    "A. Roro Jonggrang menyetujui pernikahan tanpa syarat",
+                                    "B. Roro Jonggrang menipu pasukan jin dengan menumbuk lesung dan membakar jerami",
+                                    "C. Bandung Bondowoso pulang ke Pengging",
+                                    "D. Pasukan jin menolak perintah Bandung"
+                                ],
+                                correct: 1
+                            },
+                            {
+                                question: "Sifat Roro Jonggrang dalam menyikapi syarat candi adalah...",
+                                options: ["A. Cerdik tapi licik", "B. Suka berterus terang", "C. Pasrah", "D. Penakut"],
+                                correct: 0
+                            }
+                        ]
+                    },
+                    3: {
+                        name: "Stage 3: Resolusi & Koda",
+                        roadmapDesc: "Kutukan Arca Ke-1000 & Nilai Kejujuran",
+                        narrative: "Jin melarikan diri saat mengira fajar tiba, sehingga candi baru berjumlah 999. Bandung yang murka karena ditipu mengutuk Roro Jonggrang menjadi arca candi ke-1.000.",
+                        eggs: [
+                            {
+                                question: "Penyelesaian cerita (Resolusi) saat Roro Jonggrang dikutuk menjadi arca melengkapi struktur teks bagian...",
+                                options: ["A. Orientasi", "B. Resolusi", "C. Komplikasi", "D. Pengenalan"],
+                                correct: 1
+                            },
+                            {
+                                question: "Pesan moral dari Legenda Candi Prambanan adalah...",
+                                options: [
+                                    "A. Jangan melakukan kecurangan dan penuhilah janji dengan jujur",
+                                    "B. Pasukan jin selalu takut pada ayam",
+                                    "C. Candi harus dibangun dalam semalam",
+                                    "D. Jangan suka membakar jerami di pagi hari"
+                                ],
+                                correct: 0
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+
+        function goToRoom1() {
+            document.getElementById('room-1').classList.remove('hidden');
+            document.getElementById('room-2').classList.add('hidden');
+            document.getElementById('room-3').classList.add('hidden');
+            document.getElementById('room-4').classList.add('hidden');
+            updateBadges(1);
+        }
+
+        function goToRoom2() {
+            const nameInput = document.getElementById('input-student-name').value.trim();
+            const classInput = document.getElementById('input-student-class').value.trim();
+
+            studentName = nameInput !== "" ? nameInput : "Siswa Petualang";
+            studentClass = classInput !== "" ? classInput : "Kelas 9";
+
+            document.getElementById('room-1').classList.add('hidden');
+            document.getElementById('room-2').classList.remove('hidden');
+            document.getElementById('room-3').classList.add('hidden');
+            document.getElementById('room-4').classList.add('hidden');
+            updateBadges(2);
+        }
+
+        function goToRoom4() {
+            gameRunning = false;
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+
+            document.getElementById('room-1').classList.add('hidden');
+            document.getElementById('room-2').classList.add('hidden');
+            document.getElementById('room-3').classList.add('hidden');
+            document.getElementById('room-4').classList.remove('hidden');
+            updateBadges(4);
+
+            const story = storyData[selectedStoryId];
+            document.getElementById('cert-student-name').innerText = studentName;
+            document.getElementById('cert-student-class').innerText = studentClass;
+            document.getElementById('cert-story-title').innerText = story.title;
+            document.getElementById('cert-hp').innerText = `${hp}%`;
+            document.getElementById('cert-score').innerText = score;
+        }
+
+        function resetGameToRoom2() {
+            goToRoom2();
+        }
+
+        function updateBadges(stepNum) {
+            for (let i = 1; i <= 4; i++) {
+                const badge = document.getElementById(`step-${i}-badge`);
+                if (badge) {
+                    if (i === stepNum) {
+                        badge.className = "px-2.5 py-1 rounded-full bg-amber-500 text-slate-950 font-bold";
+                    } else {
+                        badge.className = "px-2.5 py-1 rounded-full bg-slate-800 text-slate-400";
+                    }
+                }
+            }
+        }
+
+        function openStageRoadmap(storyId) {
+            selectedStoryId = storyId;
+            const story = storyData[storyId];
+
+            document.getElementById('roadmap-story-badge').innerText = `Legenda #${storyId}`;
+            document.getElementById('roadmap-story-title').innerText = story.title;
+            document.getElementById('roadmap-stage1-desc').innerText = story.stages[1].roadmapDesc;
+            document.getElementById('roadmap-stage2-desc').innerText = story.stages[2].roadmapDesc;
+            document.getElementById('roadmap-stage3-desc').innerText = story.stages[3].roadmapDesc;
+
+            document.getElementById('stage-roadmap-modal').classList.remove('hidden');
+        }
+
+        function closeStageRoadmap() {
+            document.getElementById('stage-roadmap-modal').classList.add('hidden');
+        }
+
+        function confirmStartGameFromRoadmap() {
+            closeStageRoadmap();
+            currentStage = 1;
+            currentEggIndex = 1;
+            hp = 100;
+            score = 0;
+
+            document.getElementById('room-2').classList.add('hidden');
+            document.getElementById('room-3').classList.remove('hidden');
+            updateBadges(3);
+
+            initCanvasGame();
+        }
+
+        function triggerJump() {
+            if (player.isGrounded || player.coyoteTimer > 0) {
+                player.vy = player.jumpStrength;
+                player.isGrounded = false;
+                player.coyoteTimer = 0;
+            }
+        }
+
+        function initCanvasGame() {
+            canvas = document.getElementById('gameCanvas');
+            ctx = canvas.getContext('2d');
+
+            const story = storyData[selectedStoryId];
+            document.getElementById('hud-hero-icon').innerText = story.heroIcon;
+            document.getElementById('hud-story-title').innerText = story.title;
+            document.getElementById('hud-stage-name').innerText = story.stages[currentStage].name;
+            document.getElementById('hud-stage-badge').innerText = `${currentStage}/3 STAGE`;
+
+            updateHUD();
+
+            player.y = player.groundY;
+            player.vy = 0;
+            player.isGrounded = true;
+
+            items = [];
+            spawnInitialItems();
+            spawnGiantEgg();
+
+            gameRunning = true;
+            lastTime = performance.now();
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            gameLoop();
+        }
+
+        function updateHUD() {
+            const hpBar = document.getElementById('hp-bar-inner');
+            hpBar.style.width = `${Math.max(0, hp)}%`;
+            document.getElementById('hp-text').innerText = `${Math.max(0, hp)}%`;
+            document.getElementById('score-text').innerText = score;
+        }
+
+        function spawnInitialItems() {
+            const types = [
+                { icon: '🍎', type: 'fruit', points: 10, heal: 5 },
+                { icon: '🍌', type: 'fruit', points: 10, heal: 5 },
+                { icon: '🌺', type: 'flower', points: 15, heal: 5 },
+                { icon: '🔥', type: 'fire', points: -20, damage: 10 }
+            ];
+
+            for (let i = 0; i < 4; i++) {
+                const randomType = types[Math.floor(Math.random() * types.length)];
+                items.push({
+                    x: 400 + i * 180,
+                    y: 180 + Math.random() * 80,
+                    type: randomType,
+                    collected: false
+                });
+            }
+        }
+
+        function spawnGiantEgg() {
+            giantEgg = {
+                x: 1000,
+                y: 260,
+                width: 60,
+                height: 70,
+                icon: '🥚',
+                triggered: false
+            };
+        }
+
+        function gameLoop(timestamp) {
+            if (!gameRunning) return;
+
+            // Update Player physics
+            player.vy += player.gravity;
+            player.y += player.vy;
+
+            if (player.y >= player.groundY) {
+                player.y = player.groundY;
+                player.vy = 0;
+                player.isGrounded = true;
+                player.coyoteTimer = 5; // coyote time tolerance
+            } else {
+                player.isGrounded = false;
+                if (player.coyoteTimer > 0) player.coyoteTimer--;
+            }
+
+            // Move items
+            items.forEach(item => {
+                item.x -= 4;
+                if (item.x < -40) {
+                    item.x = canvas.width + Math.random() * 200;
+                    item.y = 180 + Math.random() * 80;
+                    item.collected = false;
+                }
+
+                // Collision with player
+                if (!item.collected && Math.abs(item.x - player.x) < 35 && Math.abs(item.y - player.y) < 35) {
+                    item.collected = true;
+                    if (item.type.type === 'fire') {
+                        hp = Math.max(0, hp - item.type.damage);
+                        score = Math.max(0, score + item.type.points);
+                    } else {
+                        score += item.type.points;
+                        hp = Math.min(100, hp + item.type.heal);
+                    }
+                    updateHUD();
+                }
+            });
+
+            // Move Giant Egg
+            let nearestObject = null;
+            if (giantEgg) {
+                giantEgg.x -= 3.5;
+                nearestObject = giantEgg;
+
+                // Hit giant egg or missed egg
+                if (!giantEgg.triggered && Math.abs(giantEgg.x - player.x) < 45 && Math.abs(giantEgg.y - player.y) < 50) {
+                    giantEgg.triggered = true;
+                    triggerQuizModal();
+                } else if (!giantEgg.triggered && giantEgg.x < player.x - 60) {
+                    // Passed egg without hit penalty (-10% HP) and open quiz
+                    giantEgg.triggered = true;
+                    hp = Math.max(0, hp - 10);
+                    updateHUD();
+                    triggerQuizModal();
+                }
+            }
+
+            // Find nearest item if egg is not active
+            if (!nearestObject || nearestObject.x < player.x) {
+                nearestObject = items.find(i => !i.collected && i.x > player.x) || null;
+            }
+
+            render(nearestObject);
+
+            if (gameRunning) {
+                animFrameId = requestAnimationFrame(gameLoop);
+            }
+        }
+
+        function render(nearestObject) {
+            const env = stageEnvironments[currentStage] || stageEnvironments[1];
+
+            // Sky Background
+            ctx.fillStyle = env.skyColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Stars effect for Stage 3
+            if (currentStage === 3) {
+                ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+                for (let i = 0; i < 20; i++) {
+                    const starX = (i * 47) % canvas.width;
+                    const starY = (i * 29) % 200;
+                    ctx.fillRect(starX, starY, 2, 2);
+                }
+            }
+
+            // Ground
+            ctx.fillStyle = env.groundColor;
+            ctx.fillRect(0, 330, canvas.width, 120);
+            ctx.fillStyle = env.pathAccent;
+            ctx.fillRect(0, 330, canvas.width, 8);
+
+            // Render Floating Items
+            items.forEach(item => {
+                if (!item.collected) {
+                    ctx.font = '28px sans-serif';
+                    ctx.fillText(item.type.icon, item.x, item.y);
+                }
+            });
+
+            // Render Giant Egg
+            if (giantEgg && !giantEgg.triggered) {
+                ctx.font = '54px sans-serif';
+                ctx.fillText(giantEgg.icon, giantEgg.x, giantEgg.y);
+            }
+
+            // Render Player with look-up rotation towards overhead target
+            const heroIcon = storyData[selectedStoryId].heroIcon;
+            ctx.save();
+            ctx.translate(player.x, player.y);
+
+            if (nearestObject && nearestObject.y < player.y) {
+                const angle = Math.atan2(nearestObject.y - player.y, nearestObject.x - player.x);
+                ctx.rotate(angle * 0.15);
+
+                ctx.strokeStyle = 'rgba(254, 240, 138, 0.3)';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(15, -15);
+                ctx.lineTo(nearestObject.x - player.x, nearestObject.y - player.y);
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+
+            ctx.font = '44px sans-serif';
+            ctx.fillText(heroIcon, -10, 0);
+            ctx.restore();
+        }
+
+        function triggerQuizModal() {
+            gameRunning = false;
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+
+            const story = storyData[selectedStoryId];
+            const stageObj = story.stages[currentStage];
+            const questionData = stageObj.eggs[currentEggIndex - 1];
+
+            document.getElementById('quiz-stage-tag').innerText = `${stageObj.name} (Telur #${currentEggIndex})`;
+            document.getElementById('quiz-narrative').innerText = `"${stageObj.narrative}"`;
+            document.getElementById('quiz-question').innerText = questionData.question;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = '';
+
+            const feedbackDiv = document.getElementById('quiz-feedback');
+            feedbackDiv.classList.add('hidden');
+
+            questionData.options.forEach((optionText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full text-left p-3 rounded-xl bg-slate-950 border border-amber-500/30 text-xs font-semibold text-amber-100 hover:border-amber-400 hover:bg-slate-900 transition';
+                btn.innerText = optionText;
+                btn.onclick = () => handleQuizAnswer(idx, questionData.correct);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('quiz-modal').classList.remove('hidden');
+        }
+
+        function handleQuizAnswer(selectedIndex, correctIndex) {
+            const feedbackDiv = document.getElementById('quiz-feedback');
+            feedbackDiv.classList.remove('hidden');
+
+            if (selectedIndex === correctIndex) {
+                // Correct Answer!
+                feedbackDiv.className = "p-2.5 rounded-xl text-center text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+                feedbackDiv.innerText = "✨ JAWABAN BENAR! (+20% Energi & +50 Skor)";
+
+                hp = Math.min(100, hp + 20);
+                score += 50;
+                updateHUD();
+
+                setTimeout(() => {
+                    document.getElementById('quiz-modal').classList.add('hidden');
+                    advanceProgress();
+                }, 1200);
+
+            } else {
+                // Wrong Answer!
+                feedbackDiv.className = "p-2.5 rounded-xl text-center text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40";
+                feedbackDiv.innerText = "Jawaban mu salah";
+
+                hp = Math.max(0, hp - 25);
+                updateHUD();
+
+                if (hp <= 0) {
+                    setTimeout(() => {
+                        alert("Energi kamu habis! Mengulang Stage ini...");
+                        hp = 50;
+                        updateHUD();
+                        document.getElementById('quiz-modal').classList.add('hidden');
+                        initCanvasGame();
+                    }, 1200);
+                }
+            }
+        }
+
+        function advanceProgress() {
+            if (currentEggIndex === 1) {
+                // Move to Egg 2 in same stage
+                currentEggIndex = 2;
+                spawnGiantEgg();
+                gameRunning = true;
+                gameLoop();
+            } else {
+                // Stage Complete! Show Stage Clear Modal
+                if (currentStage < 3) {
+                    showStageClearModal();
+                } else {
+                    // All 3 stages completed! Go to Final Certificate
+                    goToRoom4();
+                }
+            }
+        }
+
+        function showStageClearModal() {
+            gameRunning = false;
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+
+            const story = storyData[selectedStoryId];
+            const currentStageObj = story.stages[currentStage];
+            const nextStageObj = story.stages[currentStage + 1];
+
+            document.getElementById('stage-clear-title').innerText = `${currentStageObj.name.toUpperCase()} SELESAI!`;
+            document.getElementById('stage-clear-sub').innerText = `Hebat, ${studentName}! Kamu berhasil menguasai materi ${currentStageObj.name}.`;
+            document.getElementById('stage-clear-score').innerText = score;
+            document.getElementById('stage-clear-next-name').innerText = nextStageObj.name;
+
+            document.getElementById('stage-clear-modal').classList.remove('hidden');
+        }
+
+        function proceedToNextStage() {
+            document.getElementById('stage-clear-modal').classList.add('hidden');
+            currentStage++;
+            currentEggIndex = 1;
+            initCanvasGame();
+        }
+
+        // Global Keyboard Listeners for Space / ArrowUp jump
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW') {
+                if (document.getElementById('room-3') && !document.getElementById('room-3').classList.contains('hidden')) {
+                    e.preventDefault();
+                    triggerJump();
+                }
+            }
+        });
+
+        // Initialize App on Load
+        window.onload = function() {
+            goToRoom1();
+        };
+    </script>
+</body>
+</html>
